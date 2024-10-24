@@ -9,8 +9,8 @@
 <p>Teams 線上教學:</p>
 <p style="padding-left: 30px;">以 "學號@nfu.edu.tw" 登入 <a href="https://login.microsoftonline.com/">https://login.microsoftonline.com/</a> Office 365</p>
 <p style="padding-left: 30px;">Teams 團隊代碼: <span class="fui-Text ___vec8h90 fk6fouc f1pbo8a8 f1i3iumi figsok6 fpgzoln f1w7gpdv f6juhto f1mtd64y f1y7q3j9 f2jf649 foxqkq2" data-tid="join-team-code">ldodwua</span></p>
-<p>個人倉儲:</p>
-<p>個人網站:</p>
+<p>個人倉儲: <a href="https://github.com/mdecp2024/hw-41323141">https://github.com/mdecp2024/hw-41323141</a> </p>
+<p>個人網站:<span> </span><a href="https://github.com/mdecp2024/hw-41323141">https://github.com/mdecp2024/hw-41323141</a><span> </span><span> </span></p>
 <p>其他資訊:</p>
 <p style="padding-left: 30px;"><a href="/downloads/cd2023_pj3ag4_zmq_football_4.7.7z">cd2023_pj3ag4_zmq_football_4.7.7z</a></p>
 <p style="padding-left: 30px;"><a href="https://localhost:9446/downloads/cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z">cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z</a></p>
@@ -39,6 +39,9 @@
 <h2>HW 1 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 Topic 1 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
+<h3>w7</h3>
+<p><iframe 560="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="/&lt;iframe width=" title="YouTube video player" width="560"></iframe>" title="YouTube video player"&gt;</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" p="" referrerpolicy="strict-origin-when-cross-origin" width="560">
 <h1>HW 2</h1>
 <h4>主題: Python 的數列、判斷式與重複迴圈 (20%)<span style="background-color: #ffff99;"><br/></span></h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 2 and Part 3</p>
@@ -83,48 +86,31 @@
 <p><button id="add1to100">1 add to 100</button></p>
 <p style="padding-left: 30px;"><!-- 導入 brython 程式庫 --></p>
 <p>
-<script src="/static/brython.js"></script>
-<script src="/static/brython_stdlib.js"></script>
-</p>
-<p style="padding-left: 30px;"><!-- 啟動 Brython --></p>
+</p><p style="padding-left: 30px;"><!-- 啟動 Brython --></p>
 <p>
-<script>
+
 window.onload=function(){
 brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
 }
-</script>
-</p>
-<p><!-- 導入 FileSaver 與 filereader --></p>
+
+
+</p><p><!-- 導入 FileSaver 與 filereader --></p>
 <p>
-<script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
-<script src="/static/ace/filereader.js" type="text/javascript"></script>
-</p>
-<p><!-- 導入 ace --></p>
+</p><p><!-- 導入 ace --></p>
 <p>
-<script src="/static/ace/ace.js" type="text/javascript"></script>
-<script src="/static/ace/ext-language_tools.js" type="text/javascript"></script>
-<script src="/static/ace/mode-python3.js" type="text/javascript"></script>
-<script src="/static/ace/snippets/python.js" type="text/javascript"></script>
-</p>
-<p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
-<script src="/static/Cango-24v03-min.js"></script>
-<script src="/static/gearUtils-09.js"></script>
-<script src="/static/SVGpathUtils-6v03-min.js"></script>
-<script src="/static/sylvester.js"></script>
-<script src="/static/PrairieDraw.js"></script>
-</p>
-<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["kw_py_src1"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+</p><p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
+</p><p><!-- 請注意, 這裡使用 Javascript 將 localStorage["kw_py_src1"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
 <p>
-<script type="text/javascript">
+
 function doSave(storage_id, filename){
     var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
     filename = document.getElementById(filename).value
     saveAs(blob, filename+".py");
 }
-</script>
-</p>
-<p>
-<script type="text/python3">
+
+
+</p><p>
+
 from browser import document as doc
 import ace
 # 清除畫布
@@ -158,10 +144,10 @@ doc['kw_clear_console1'].bind('click', Ace1.clear_console)
 doc['clear_bd1'].bind('click', clear_bd1)
 # 呼叫函式執行
 run1()
-</script>
-</p>
-<p><!-- add 1 to 100 開始 -->
-<script type="text/python3">
+
+
+</p><p><!-- add 1 to 100 開始 -->
+
 from browser import document as doc
 import ace
 
@@ -185,20 +171,20 @@ def add(ev):
 
 # id 為 "add1to100" 的按鈕點按時, 執行 add 方法
 doc["add1to100"].bind('click', add)
-</script>
-</p>
-<p><!-- add 1 to 100 結束--></p>
+
+
+</p><p><!-- add 1 to 100 結束--></p>
 <p style="padding-left: 30px;"><!-- editor1 開始 --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <p><!-- 存擋表單開始 --></p>
-<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
+<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label>
 <p><!-- 存擋表單結束 --></p>
 <p></p>
 <p><!-- 執行與清除按鈕開始 --></p>
-<p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><!-- 執行與清除按鈕結束 --></p>
+<p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button>Reload
+</p><p><!-- 執行與清除按鈕結束 --></p>
 <p></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
@@ -211,7 +197,7 @@ doc["add1to100"].bind('click', add)
 <p><button id="add1to100part2">1 add to 100</button><button id="cango_three_gears">cango_three_gears</button><button id="bsnake">BSnake</button><button id="aitetris">AI Tetris</button><button id="threejsblock">Rotating Block</button></p>
 <p><!-- 請注意, 這裡使用 Javascript 將 localStorage["kw_py_src2"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
 <p>
-<script type="text/python3">
+
 from browser import document as doc
 import ace
 # 清除畫布
@@ -245,10 +231,10 @@ doc['kw_clear_console2'].bind('click', Ace3.clear_console)
 doc['clear_bd2'].bind('click', clear_bd2)
 # 呼叫函式執行
 run2()
-</script>
-</p>
-<p><!-- add 1 to 100 part2 開始 -->
-<script type="text/python3">
+
+
+</p><p><!-- add 1 to 100 part2 開始 -->
+
 from browser import document as doc
 import ace
 
@@ -306,20 +292,20 @@ threejsblock_url = "https://gist.githubusercontent.com/mdecycu/2c6323eff49b496d1
 threejsblock = button2(threejsblock_url)
 doc["threejsblock"].bind("click", threejsblock.do)
 ################################## threejsblock end
-</script>
-</p>
-<p><!-- add 1 to 100 part2 結束--></p>
+
+
+</p><p><!-- add 1 to 100 part2 結束--></p>
 <p style="padding-left: 30px;"><!-- editor2 開始 --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor2" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <p><!-- 存擋表單開始 --></p>
-<form><label>Filename: <input id="kw_filename2" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src2', 'kw_filename2');" type="submit" value="Save"/></form>
+<form><label>Filename: <input id="kw_filename2" placeholder="input file name" type="text"/>.py</label>
 <p><!-- 存擋表單結束 --></p>
 <p></p>
 <p><!-- 執行與清除按鈕開始 --></p>
-<p><button id="kw_run2">Run</button> <button id="kw_show_console2">Output</button> <button id="kw_clear_console2">清除輸出區</button><button id="clear_bd2">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><!-- 執行與清除按鈕結束 --></p>
+<p><button id="kw_run2">Run</button> <button id="kw_show_console2">Output</button> <button id="kw_clear_console2">清除輸出區</button><button id="clear_bd2">清除繪圖區</button>Reload
+</p><p><!-- 執行與清除按鈕結束 --></p>
 <p></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console2"></textarea></div>
@@ -328,55 +314,36 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <p style="padding-left: 30px;"><!-- editor2 結束 --></p>
 <hr/>
 <p>
-<script src="https://unpkg.com/three@0.144.0/build/three.js" type="text/javascript"></script>
-</p>
 <h1>Brython</h1>
-<p>從 1 累加到 100:</p>
+</p><p>從 1 累加到 100:</p>
 <p><button id="add1to100">1 add to 100</button></p>
 <!-- 導入 brython 程式庫 -->
 <p>
-<script src="/static/brython.js"></script>
-<script src="/static/brython_stdlib.js"></script>
-</p>
 <!-- 啟動 Brython -->
-<p>
-<script>
+</p><p>
+
 window.onload=function(){
 brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
 }
-</script>
-</p>
-<p><!-- 導入 FileSaver 與 filereader --></p>
+
+
+</p><p><!-- 導入 FileSaver 與 filereader --></p>
 <p>
-<script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
-<script src="/static/ace/filereader.js" type="text/javascript"></script>
-</p>
-<p><!-- 導入 ace --></p>
+</p><p><!-- 導入 ace --></p>
 <p>
-<script src="/static/ace/ace.js" type="text/javascript"></script>
-<script src="/static/ace/ext-language_tools.js" type="text/javascript"></script>
-<script src="/static/ace/mode-python3.js" type="text/javascript"></script>
-<script src="/static/ace/snippets/python.js" type="text/javascript"></script>
-</p>
-<p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
-<script src="/static/Cango-24v03-min.js"></script>
-<script src="/static/gearUtils-09.js"></script>
-<script src="/static/SVGpathUtils-6v03-min.js"></script>
-<script src="/static/sylvester.js"></script>
-<script src="/static/PrairieDraw.js"></script>
-</p>
-<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["kw_py_src1"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+</p><p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
+</p><p><!-- 請注意, 這裡使用 Javascript 將 localStorage["kw_py_src1"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
 <p>
-<script type="text/javascript">
+
 function doSave(storage_id, filename){
     var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
     filename = document.getElementById(filename).value
     saveAs(blob, filename+".py");
 }
-</script>
-</p>
-<p>
-<script type="text/python3">
+
+
+</p><p>
+
 from browser import document as doc
 import ace
 # 清除畫布
@@ -410,10 +377,10 @@ doc['kw_clear_console1'].bind('click', Ace1.clear_console)
 doc['clear_bd1'].bind('click', clear_bd1)
 # 呼叫函式執行
 run1()
-</script>
-</p>
-<p><!-- add 1 to 100 開始 -->
-<script type="text/python3">
+
+
+</p><p><!-- add 1 to 100 開始 -->
+
 from browser import document as doc
 import ace
 
@@ -437,20 +404,20 @@ def add(ev):
 
 # id 為 "add1to100" 的按鈕點按時, 執行 add 方法
 doc["add1to100"].bind('click', add)
-</script>
-</p>
-<p><!-- add 1 to 100 結束--></p>
+
+
+</p><p><!-- add 1 to 100 結束--></p>
 <!-- editor1 開始 -->
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <p><!-- 存擋表單開始 --></p>
-<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
+<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label>
 <p><!-- 存擋表單結束 --></p>
 <p></p>
 <p><!-- 執行與清除按鈕開始 --></p>
-<p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><!-- 執行與清除按鈕結束 --></p>
+<p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button>Reload
+</p><p><!-- 執行與清除按鈕結束 --></p>
 <p></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
@@ -461,7 +428,7 @@ doc["add1to100"].bind('click', add)
 <p><button id="add1to100part2">1 add to 100</button><button id="cango_three_gears">cango_three_gears</button><button id="bsnake">BSnake</button><button id="aitetris">AI Tetris</button><button id="threejsblock">Rotating Block</button></p>
 <p><!-- 請注意, 這裡使用 Javascript 將 localStorage["kw_py_src2"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
 <p>
-<script type="text/python3">
+
 from browser import document as doc
 import ace
 # 清除畫布
@@ -495,10 +462,10 @@ doc['kw_clear_console2'].bind('click', Ace3.clear_console)
 doc['clear_bd2'].bind('click', clear_bd2)
 # 呼叫函式執行
 run2()
-</script>
-</p>
-<p><!-- add 1 to 100 part2 開始 -->
-<script type="text/python3">
+
+
+</p><p><!-- add 1 to 100 part2 開始 -->
+
 from browser import document as doc
 import ace
 
@@ -556,20 +523,20 @@ threejsblock_url = "https://gist.githubusercontent.com/mdecycu/2c6323eff49b496d1
 threejsblock = button2(threejsblock_url)
 doc["threejsblock"].bind("click", threejsblock.do)
 ################################## threejsblock end
-</script>
-</p>
-<p><!-- add 1 to 100 part2 結束--></p>
+
+
+</p><p><!-- add 1 to 100 part2 結束--></p>
 <!-- editor2 開始 -->
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor2" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <p><!-- 存擋表單開始 --></p>
-<form><label>Filename: <input id="kw_filename2" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src2', 'kw_filename2');" type="submit" value="Save"/></form>
+<form><label>Filename: <input id="kw_filename2" placeholder="input file name" type="text"/>.py</label>
 <p><!-- 存擋表單結束 --></p>
 <p></p>
 <p><!-- 執行與清除按鈕開始 --></p>
-<p><button id="kw_run2">Run</button> <button id="kw_show_console2">Output</button> <button id="kw_clear_console2">清除輸出區</button><button id="clear_bd2">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><!-- 執行與清除按鈕結束 --></p>
+<p><button id="kw_run2">Run</button> <button id="kw_show_console2">Output</button> <button id="kw_clear_console2">清除輸出區</button><button id="clear_bd2">清除繪圖區</button>Reload
+</p><p><!-- 執行與清除按鈕結束 --></p>
 <p></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console2"></textarea></div>
@@ -577,5 +544,4 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <div id="brython_div2"></div>
 <!-- editor2 結束 --><hr/>
 <p>
-<script src="https://unpkg.com/three@0.144.0/build/three.js" type="text/javascript"></script>
-</p>
+</p></form></form></form></form></iframe></p>
