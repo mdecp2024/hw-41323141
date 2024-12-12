@@ -162,10 +162,11 @@ ctx.lineTo(220, 220)
 ctx.stroke()</pre>
 <p><img alt="" height="279" src="./../images/螢幕擷取畫面 2024-12-05 145836.png" width="377"/></p>
 <p></p>
-<p><a href="https://mdecp2024.github.io/hw-41323141/content/Brython.html?src=https://gist.githubusercontent.com/41323141/792eb10ba8a692fc014f5fa78c2cd463/raw/71fc0439ab548be264afeefa9d8a2d455e875388/gistfile1.txt">程式</a></p>
+<p><a href="https://mdecp2024.github.io/hw-41323141/content/Brython.html?src=https://gist.githubusercontent.com/41323141/3c04203edaf2640654bbad802d8c7ab8/raw/1a4d94d97e46090c4524a6d2a9697be309ddadfd/gistfile1.txt">第二題</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
 from browser import document as doc
 import math
+import random
 
 canvas = html.CANVAS(width=500, height=500)
 brython_div = doc["brython_div1"]
@@ -174,8 +175,12 @@ brython_div &lt;= canvas
 ctx = canvas.getContext("2d")
 ctx.lineWidth = 4
 
+# 隨機顏色生成函數
+def random_color():
+    return f"rgb({random.randint(0, 255)}, {random.randint(0, 255)}, {random.randint(0, 255)})"
+
 # 混色的
-ctx.globalCompositeOperation = "screen"  # 修正這裡的錯誤，改為 "screen"
+ctx.globalCompositeOperation = "screen"  # 設置顏色混合模式為 'screen'
 
 # 黑邊圓*2 (每個畫四個扇形)
 ctx.strokeStyle = 'black'
@@ -184,28 +189,28 @@ ctx.strokeStyle = 'black'
 # 第一個扇形
 ctx.beginPath()
 ctx.arc(160, 160, 141, 0.25 * math.pi, 0.75 * math.pi)
-ctx.fillStyle = "Turquoise"
+ctx.fillStyle = random_color()  # 隨機顏色
 ctx.fill()
 ctx.stroke()
 
 # 第二個扇形
 ctx.beginPath()
 ctx.arc(160, 160, 141, 0.75 * math.pi, 1.25 * math.pi)
-ctx.fillStyle = "Tomato"
+ctx.fillStyle = random_color()  # 隨機顏色
 ctx.fill()
 ctx.stroke()
 
 # 第三個扇形
 ctx.beginPath()
 ctx.arc(160, 160, 141, 1.25 * math.pi, 1.75 * math.pi)
-ctx.fillStyle = "SpringGreen"
+ctx.fillStyle = random_color()  # 隨機顏色
 ctx.fill()
 ctx.stroke()
 
 # 第四個扇形
 ctx.beginPath()
 ctx.arc(160, 160, 141, 1.75 * math.pi, 0.25 * math.pi)
-ctx.fillStyle = "Red"
+ctx.fillStyle = random_color()  # 隨機顏色
 ctx.fill()
 ctx.stroke()
 
@@ -213,32 +218,59 @@ ctx.stroke()
 # 第一個扇形
 ctx.beginPath()
 ctx.arc(260, 260, 141, 1.25 * math.pi, 1.75 * math.pi)
-ctx.fillStyle = "Purple"
+ctx.fillStyle = random_color()  # 隨機顏色
 ctx.fill()
 ctx.stroke()
 
 # 第二個扇形
 ctx.beginPath()
 ctx.arc(260, 260, 141, 1.75 * math.pi, 2.25 * math.pi)
-ctx.fillStyle = "OliveDrab"
+ctx.fillStyle = random_color()  # 隨機顏色
 ctx.fill()
 ctx.stroke()
 
 # 第三個扇形
 ctx.beginPath()
 ctx.arc(260, 260, 141, 2.25 * math.pi, 2.75 * math.pi)
-ctx.fillStyle = "Orange"
+ctx.fillStyle = random_color()  # 隨機顏色
 ctx.fill()
 ctx.stroke()
 
 # 第四個扇形
 ctx.beginPath()
 ctx.arc(260, 260, 141, 2.75 * math.pi, 3.25 * math.pi)
-ctx.fillStyle = "MediumVioletRed"
+ctx.fillStyle = random_color()  # 隨機顏色
 ctx.fill()
 ctx.stroke()
+
+# 畫正方形並填充顏色
+ctx.strokeStyle = 'black'
+
+# 畫正方形的對角線：左上角到右下角
+ctx.beginPath()
+ctx.moveTo(60, 60)
+ctx.lineTo(260, 260)
+ctx.stroke()
+
+# 填充第一個三角形 (左上到對角線)
+ctx.beginPath()
+ctx.moveTo(60, 60)
+ctx.lineTo(160, 60)  # 左上角到對角線的右上方
+ctx.lineTo(160, 160)  # 右上角到對角線的中點
+ctx.closePath()
+ctx.fillStyle = random_color()  # 隨機顏色
+ctx.fill()
+
+# 填充第二個三角形 (右下到對角線)
+ctx.beginPath()
+ctx.moveTo(160, 160)  # 中點
+ctx.lineTo(260, 160)  # 右上角到對角線的中點
+ctx.lineTo(260, 260)  # 右下角
+ctx.closePath()
+ctx.fillStyle = random_color()  # 隨機顏色
+ctx.fill()
 </pre>
-<p><img alt="" height="290" src="./../images/螢幕擷取畫面 2024-12-12 135428.png" width="323"/><br/><br/></p>
+<p><img alt="" height="316" src="./../images/螢幕擷取畫面 2024-12-12 141442.png" width="366"/><br/><br/><br/></p>
 <p></p><br />w12_hw << <a href='w12_hw.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
         
     <!-- footer -->
