@@ -126,11 +126,155 @@ for y in range(n):
         print("(",x,",",y,")",sep="")</pre>
 <p><br/><br/><br/><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/7zOxsfKjFt4" width="560"></iframe></p>
 <h3>w13_hw</h3>
-<p><a href="https://solid-sniffle-97j7qxvp555gf7774-8081.app.github.dev/content/Brython.html?src=https://gist.githubusercontent.com/41323141/c7807b71823d89610f8c43acd6ca2997/raw/18d64e623bd30c784aeae43735b2e5db58a79a74/gistfile1.txt">程式</a></p>
+<p><a href="https://mdecp2024.github.io/hw-41323141/content/Brython.html?src=https://gist.githubusercontent.com/41323141/c7807b71823d89610f8c43acd6ca2997/raw/18d64e623bd30c784aeae43735b2e5db58a79a74/gistfile1.txt">程式</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+
+
+canvas = html.CANVAS(width=400, height=400)
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+ctx = canvas.getContext("2d")
+ctx.lineWidth = 1
+
+
+ctx.strokeStyle = 'blue'  
+ctx.beginPath() 
+ctx.moveTo(-10, -10) 
+ctx.lineTo(220, 220)  
+ctx.stroke()</pre>
 <p><img alt="" height="279" src="/images/螢幕擷取畫面 2024-12-05 145836.png" width="377"/></p>
 <p></p>
-<p><a href="https://solid-sniffle-97j7qxvp555gf7774-8081.app.github.dev/content/Brython.html?src=https://gist.githubusercontent.com/41323141/4c82e50f6dee4dc87032631e17a4a04a/raw/d575d47093899d162aea0f7da71cba625f59599f/gistfile1.txt">程式</a></p>
-<p></p>
+<p><a href="https://mdecp2024.github.io/hw-41323141/content/Brython.html?src=https://gist.githubusercontent.com/41323141/4c82e50f6dee4dc87032631e17a4a04a/raw/d575d47093899d162aea0f7da71cba625f59599f/gistfile1.txt">程式</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+import math
+  
+canvas = html.CANVAS(width=500, height=500)
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+  
+ctx = canvas.getContext("2d")
+ctx.lineWidth = 4
+ 
+#混色的
+ctx.globalCompositeOperation = "screem"
+ 
+ 
+#黑邊圓*2(每個畫四個邊邊)
+ctx.strokeStyle = 'black'
+#第一個圓
+ctx.beginPath()
+ctx.arc(160, 160, 141, 0.25 * math.pi,0.75 * math.pi)
+ctx.fillStyle = "Turquoise"
+ctx.fill()
+ctx.stroke()
+ 
+ctx.beginPath()
+ctx.arc(160, 160, 141, 0.75 * math.pi,1.25 * math.pi)
+ctx.fillStyle = "Tomato"
+ctx.fill()
+ctx.stroke()
+ 
+ctx.beginPath()
+ctx.arc(160, 160, 141, 1.25 * math.pi,1.75 * math.pi)
+ctx.fillStyle = "SpringGreen"
+ctx.fill()
+ctx.stroke()
+ 
+ctx.beginPath()
+ctx.arc(160, 160, 141, 1.75 * math.pi,0.25 * math.pi)
+ctx.fillStyle = "FloralWhite"
+ctx.fill()
+ctx.stroke()
+ 
+#第二個圓
+ctx.beginPath()
+ctx.arc(260, 260, 141, 1.25 * math.pi,1.75 * math.pi)
+ctx.fillStyle = "Purple"
+ctx.fill()
+ctx.stroke()
+ 
+ctx.beginPath()
+ctx.arc(260, 260, 141, 1.75 * math.pi,0.25 * math.pi)
+ctx.fillStyle = "OliveDrab"
+ctx.fill()
+ctx.stroke()
+ 
+ctx.beginPath()
+ctx.arc(260, 260, 141, 0.25 * math.pi,0.75 * math.pi)
+ctx.fillStyle = "Orange"
+ctx.fill()
+ctx.stroke()
+ 
+ctx.beginPath()
+ctx.arc(260, 260, 141, 0.75 * math.pi,1.25 * math.pi)
+ctx.fillStyle = "MediumVioletRed"
+ctx.fill()
+ctx.stroke()
+ 
+ 
+#紅方形*2(4個三角形)
+ctx.strokeStyle = 'red'
+ctx.beginPath()
+ctx.moveTo(60,60)
+ctx.lineTo(60,260)
+ctx.lineTo(260,260)
+ctx.fillStyle = "Gold"
+ctx.fill()
+ctx.stroke()
+ 
+ctx.beginPath()
+ctx.moveTo(60,60)
+ctx.lineTo(260,60)
+ctx.lineTo(260,260)
+ctx.fillStyle = "Indigo"
+ctx.fill()
+ctx.stroke()
+ 
+ctx.beginPath()
+ctx.moveTo(160,160)
+ctx.lineTo(360,160)
+ctx.lineTo(360,360)
+ctx.fillStyle = "Cyan"
+ctx.fill()
+ctx.stroke()
+ 
+ctx.beginPath()
+ctx.moveTo(160,160)
+ctx.lineTo(160,360)
+ctx.lineTo(360,360)
+ctx.fillStyle = "SpringGreen"
+ctx.fill()
+ctx.stroke()
+ 
+  
+#重疊的小方型
+ctx.beginPath()
+ctx.moveTo(160,160)
+ctx.lineTo(160,260)
+ctx.lineTo(260,260)
+ctx.fillStyle = "Turquoise"
+ctx.fill()
+ctx.stroke()
+ 
+ctx.beginPath()
+ctx.moveTo(160,160)
+ctx.lineTo(260,160)
+ctx.lineTo(260,260)
+ctx.fillStyle = "SlateBlue"
+ctx.fill()
+ctx.stroke()
+ 
+ 
+#籃斜線
+ctx.strokeStyle = 'blue'
+ctx.beginPath() 
+ctx.moveTo(60, 60)
+ctx.lineTo(260, 260)
+ctx.stroke()</pre>
+<p><br/><br/></p>
 <p><img alt="" height="316" src="/images/螢幕擷取畫面 2024-12-12 125003.png" width="341"/></p><h1>HW 2</h1>
 <h4>主題: Python 的數列、判斷式與重複迴圈 (20%)<span style="background-color: #ffff99;"><br/></span></h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 2 and Part 3</p>
