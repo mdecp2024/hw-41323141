@@ -107,6 +107,40 @@
 <h3>w11_hw</h3>
 <p>1.  已知可以用 Python 程式<a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/5e6eda7a004c15fa7262b9a80bfa4af6/raw/c2225ac22f32ee8485a630b42cf3f4d8567bb661/up_to_down_pyramid.py">由上往下列印三角形 *</a>, 或<a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/5e6eda7a004c15fa7262b9a80bfa4af6/raw/56793c72d4495d564e3cc6214ed5fb68dbd2b21d/left_to_right_pyramid.py">由左往右列印三角形 *</a>, 請將此程式延伸到可以在 10x10 的字元區域中, 以 "*" 字元列印出圓型區域. 完成後請將程式碼存入個人 Gist 後, 直接在個人作業網站中的 Brython 頁面中執行. (提示: ?src=gist_script_URL)</p>
 <p><a href="https://solid-sniffle-97j7qxvp555gf7774-8081.app.github.dev/content/Brython.html?src=https://gist.githubusercontent.com/41323141/0c6e1b2994a24e853c8cc3cf3de23f4a/raw/5d088afbd1d2394ef5e998fe15ce80958b09ab4d/gistfile1.txt">解</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.11.3/brython.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload="brython()"&gt;
+    &lt;!-- 定義一個容器 div --&gt;
+    &lt;div id="brython_div1"&gt;&lt;/div&gt;
+
+    &lt;!-- 使用 Brython 繪製圓形 --&gt;
+    &lt;script type="text/python"&gt;
+        from browser import html
+        from browser import document as doc
+
+        # 建立畫布元素，大小為 400x400
+        canvas = html.CANVAS(width=400, height=400)
+        brython_div = doc["brython_div1"]
+        brython_div &lt;= canvas
+
+        # 獲取畫布的 2D 繪圖上下文
+        ctx = canvas.getContext("2d")
+
+        # 設定繪圖樣式
+        ctx.lineWidth = 2  # 線條寬度
+        ctx.strokeStyle = 'red'  # 線條顏色
+
+        # 繪製圓形
+        ctx.beginPath()  # 開始繪圖
+        ctx.arc(200, 200, 100, 0, 2 * 3.14159)  # 畫一個圓心在 (200, 200)，半徑為 100 的圓
+        ctx.stroke()  # 渲染圓形
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 <p>2. 已知可以在網頁中利用 Brython 繪製方格與塗色, 如下連結, 請設法修改此一程式, 直接將程式存入個人的 Gist, 並利用黑色方塊圍出一個圓形區域</p>
 <p><a href="https://solid-sniffle-97j7qxvp555gf7774-8081.app.github.dev/content/Brython.html?src=https://gist.githubusercontent.com/41323141/956b26c34d6070343b526c568573e57a/raw/440771f0d780c0ccfefecfe1e7fdd9fbaada965e/gistfile1.txt">解</a></p>
 <p><img alt="" height="229" src="/images/螢幕擷取畫面 2024-11-28 151130.png" width="227"/></p>
